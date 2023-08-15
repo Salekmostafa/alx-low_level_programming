@@ -1,3 +1,2 @@
 #!/bin/bash
-gcc -E $CFILE -o c
-0-preprocessor 100-intel 2-assembler 4-puts.c 6-size.c main.c 1-compiler 101-quote.c 3-name 5-printf.c README.md
+gcc -E $CFILE > c
