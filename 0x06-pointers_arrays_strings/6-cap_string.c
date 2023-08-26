@@ -2,7 +2,7 @@
 
 /**
  * cap_string - Capitalize
- * @src: The str to cap
+ * @str: The str to cap
  * Return: ptr tothe changed string.
  */
 
