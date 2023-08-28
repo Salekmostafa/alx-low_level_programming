@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 void print_board(char (*a)[8])
