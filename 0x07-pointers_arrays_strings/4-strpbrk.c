@@ -2,26 +2,25 @@
 #include "main.h"
 
 /**
- * _strpbrk - Entrypt
+ * _strpbrk - Entry point
  * @s: input
  * @accept: input
- * Return: always 0
-*/
+ * Return: Pointer to the matching byte or NULL if not found
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i, n;
+    int i, n;
 
-	for (i = 0; s[i] != '\n'; i++)
-	{
-		for (n = 0; accept[n] != '\n'; n++)
-		{
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (n = 0; accept[n] != '\0'; n++)
+        {
+            if (s[i] == accept[n])
+                return (s + i);
+        }
+    }
 
-			if (s[i] == accept[n])
-				return (s + i);
-		}
-	}
-
-	return (NULL);
+    return (NULL);
 }
 
