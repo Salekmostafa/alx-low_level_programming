@@ -1,36 +1,26 @@
 #include <stdio.h>
+#include "main.h"
 
-char *_strstr(char *haystack, char *needle) {
-    while (*haystack) {
-        char *haystack_ptr = haystack;
-        char *needle_ptr = needle;
+/**
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Pointer to the located substring or NULL if not found
+ */
 
-        while (*needle_ptr && *needle_ptr == *haystack_ptr) {
-            needle_ptr++;
-            haystack_ptr++;
+char *_strstr(char *haystack, char *needle)
+{
+    for (; *haystack != '\0'; haystack++)
+    {
+        char *a = haystack;
+        char *b = needle;
+        while (*a == *b && *b != '\0')
+        {
+            a++;
+            b++;
         }
-
-        if (!*needle_ptr) {
+        if (*b == '\0')
             return haystack;
-        }
-
-        haystack++;
     }
-
-    return NULL;
-}
-
-int main() {
-    char haystack[] = "Hello, world! This is a test.";
-    char needle[] = "world";
-
-    char *result = _strstr(haystack, needle);
-
-    if (result) {
-        printf("Substring found at position: %ld\n", result - haystack);
-    } else {
-        printf("Substring not found.\n");
-    }
-
-    return 0;
+    return (NULL);
 }
