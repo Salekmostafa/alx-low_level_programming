@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 
 void print_board(char (*a)[8])
@@ -28,3 +29,23 @@ int main() {
 
     return 0;
 }
+=======
+nclude "main.h"
+
+/**
+ * print_chessboard - Entry pt
+ * @: array
+ * Return: 0
+*/
+void print_chessboard(char (*a)[8])
+{
+    int i, j;
+
+    for (i = 0; i < 8; i++)
+    {
+        for (j = 0; j < 8; j++)
+            _putchar(a[i][j]);
+        _putchar("\n");
+    }
+}
+>>>>>>> a35b6493991dd6b8734710f8ec9ed24a667ddd5c
